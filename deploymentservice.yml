@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: myjar
+    labels:
+       env: prod
+       app: myjar
+spec:
+   replicas: 2
+   selector:
+       matchLabels:
+           env: prod
+           app: myjar
+   template:
+       metadata:
+           labels:
+              env: prod
+              app: myjar
+       spec:
+          containers:
+              - name: myjar
+                image: purushothamareddy/project2:1.0.1
+                ports:
+                  - containerPort: 8082
+                  
+                  
+ 
+---
+apiVersion: v1
+kind: Service
+metadata:
+     name: myjar
+     labels:
+         env: prod
+         app: myjar
+spec:
+  selector:
+      app: myjar
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8082
+  type: LoadBalancer    
