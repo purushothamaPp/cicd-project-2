@@ -21,7 +21,7 @@ spec:
               - name: maven
                 image: purushothamareddy/myapp:1.4
                 ports:
-                  - containerPort: 8082
+                  - containerPort: 8080
                   
                   
  
