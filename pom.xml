@@ -16,13 +16,15 @@
   </dependencies>
   <distributionManagement>
 
-		<repository>
-			<id>Maven-release</id>
-			<url>http://localhost:8081/nexus/content/repositories/Maven-release/</url>
-		</repository>
-		<snapshotRepository>
-			<id>Maven-snapshot</id>
-			<url>http://localhost:8081/nexus/content/repositories/Maven-snapshot/</url>
-		</snapshotRepository>		
+<repository>
+  <id>myfirstartifacts</id>
+  <url>https://pkgs.dev.azure.com/azurecicdpipe/azurecicd/_packaging/myfirstartifacts/maven/v1</url>
+  <releases>
+    <enabled>true</enabled>
+  </releases>
+  <snapshots>
+    <enabled>true</enabled>
+  </snapshots>
+</repository>	
   </distributionManagement>
 </project>
