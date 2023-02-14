@@ -15,7 +15,7 @@ pipeline{
        }
         stage('docker build'){
             steps{
-              sh "docker build -f purushothamareddy/project1 . "
+              sh "docker build . -f purushothamareddy/project1  "
             }
         }
         
