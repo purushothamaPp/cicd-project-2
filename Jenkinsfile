@@ -1,1 +1,13 @@
-
+pipeline{
+    agent any
+    stages{
+       stage('git checkout'){
+          steps{
+            checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'git_cred', url: 'https://github.com/purushothamaPp/cicd-project-2.git']])
+            
+          }
+       
+       }
+    
+    }
+}
