@@ -11,8 +11,14 @@ pipeline{
         stage('build'){
             steps{
               sh "mvn clean package"
+          }
+       }
+        stage('docker build'){
+            steps{
+              sh "docker build -f purushothamareddy/project1 . "
             }
-        } 
+        }
+        
     
     }
 }
