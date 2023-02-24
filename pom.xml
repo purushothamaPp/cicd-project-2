@@ -17,14 +17,14 @@
   <distributionManagement>
 
 <repository>
-  <id>myfirstartifacts</id>
-  <url>https://pkgs.dev.azure.com/azurecicdpipe/azurecicd/_packaging/myfirstartifacts/maven/v1</url>
+  <id>myapp1.0</id>
+  <url>https://pkgs.dev.azure.com/practicekanna/practice/_packaging/myapp1.0/maven/v1</url>
   <releases>
     <enabled>true</enabled>
   </releases>
   <snapshots>
     <enabled>true</enabled>
   </snapshots>
-</repository>	
+</repository>
   </distributionManagement>
 </project>
