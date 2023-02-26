@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-    name: azureproject-1
+    name: azureproject
     labels:
        env: prod
        app: app-1
@@ -10,12 +10,12 @@ spec:
    selector:
        matchLabels:
            env: prod
-           app: app-1
+           app: app-2
    template:
        metadata:
            labels:
               env: prod
-              app: app-1
+              app: app-2
        spec:
           containers:
               - name: maven
@@ -29,13 +29,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-     name: azureproject-1
+     name: azureproject
      labels:
          env: prod
-         app: app-1
+         app: app-2
 spec:
   selector:
-      app: app-1
+      app: app-2
   ports:
     - protocol: TCP
       port: 80
