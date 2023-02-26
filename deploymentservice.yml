@@ -19,7 +19,7 @@ spec:
        spec:
           containers:
               - name: maven
-                image: purushothamareddy/myapp:1.4
+                image: purushothamareddy/azureproject:1.0
                 ports:
                   - containerPort: 8080
                   
